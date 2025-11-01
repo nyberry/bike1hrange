@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bike Range Map</title>
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { height: 100vh; width: 100%; }
+        /* Make it feel clickable when not dragging */
+        .leaflet-container { cursor: crosshair !important; }
+        .leaflet-dragging, .leaflet-dragging .leaflet-container { cursor: grabbing !important; }
+    
+/* --- Legend styling --- */
+.info.legend {
+    background: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    line-height: 1.4em;
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    font-size: 14px;
+}
+.info.legend i {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+    border: 1px solid #333;
+    opacity: 0.9;
+}
+
+
+    </style>
+
+
+</head>
+<body>
+  {{ map|safe }}
+  <p style="position:absolute;top:10px;left:50px;background:white;padding:5px;">
+    Click on map for 1 hour bike range
+  </p>
+</body>
+</html>
